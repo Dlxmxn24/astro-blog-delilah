@@ -1,0 +1,20 @@
+---
+const postFiles = import.meta.glob("../posts/*.md", { eager: true });
+const posts = Object.values(postFiles);
+
+const tags = [...new Set(posts.flatMap((post) => post.frontmatter.tags || []))];
+---
+
+<html>
+  <body style="font-family: sans-serif; max-width: 800px; margin: 40px auto;">
+    <h1>All Tags</h1>
+
+    <ul>
+      {tags.map((tag) => (
+        <li>
+          <a href={`/tags/${tag}/`}>{tag}</a>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>

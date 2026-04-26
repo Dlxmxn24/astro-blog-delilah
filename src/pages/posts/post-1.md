@@ -9,7 +9,7 @@ I want this blog to be a real reflection of my journey in life insurance, not ju
 
 ## How it started
 
-When I was first hired, I was excited but also nervous. Life insurance was a completely new world to me. I knew this opportunity could open doors for me, but I also knew it would require discipline, confidence, and a lot of learning. At the beginning, everything felt unfamiliar — the terminology, the policies, the responsibility, and the pressure of needing to pass my state exams.
+When I was first hired, I was excited but also nervous. Life insurance was a completely new world to me. I knew this opportunity could open doors for me, but I also knew it would require discipline, confidence, and a lot of learning. At the beginning, everything felt unfamiliar — the terminology, the policies, the responsibility, and the pressure of needing to pass my state exams.X$X#
 
 ## Failing the life and health exams
 

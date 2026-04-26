@@ -1,12 +1,15 @@
 ---
 import Footer from "../components/Footer.astro";
+
+const postFiles = import.meta.glob("./posts/*.md", { eager: true });
+const posts = Object.values(postFiles);
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Delilah’s Journey</title>
+    <title>Blog | Delilah’s Journey</title>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
@@ -37,48 +40,8 @@ import Footer from "../components/Footer.astro";
       }
 
       h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-top: 2rem;
-      }
-
-      a {
-        color: #7a2e2e;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .hero-tag {
-        display: inline-block;
-        margin-bottom: 1rem;
-        padding: 0.35rem 0.8rem;
-        border-radius: 999px;
-        background: #ead9cf;
-        color: #5d2a2a;
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-
-      .subtitle {
-        font-size: 1.15rem;
-        color: #5a4a42;
-        max-width: 680px;
-      }
-
-      .card {
-        background: #fffdfb;
-        border: 1px solid #eadfd7;
-        border-radius: 18px;
-        padding: 28px;
-        box-shadow: 0 10px 30px rgba(44, 29, 24, 0.06);
-        margin-top: 2rem;
       }
 
       .nav {
@@ -88,6 +51,37 @@ import Footer from "../components/Footer.astro";
       .nav a {
         margin-right: 1rem;
         font-weight: 600;
+        color: #7a2e2e;
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        text-decoration: underline;
+      }
+
+      .post-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .post-item {
+        background: #fffdfb;
+        border: 1px solid #eadfd7;
+        border-radius: 18px;
+        padding: 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 30px rgba(44, 29, 24, 0.06);
+      }
+
+      .post-item a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #7a2e2e;
+        text-decoration: none;
+      }
+
+      .post-item a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -98,38 +92,20 @@ import Footer from "../components/Footer.astro";
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
+        <a href="/tags/">Tags</a>
       </nav>
 
-      <span class="hero-tag">Life Insurance Journey</span>
-      <h1>Delilah’s Journey</h1>
+      <h1>Blog</h1>
 
-      <p class="subtitle">
-        Documenting my journey as a life insurance agent — the failures, growth,
-        and lessons behind becoming licensed and building something meaningful.
-      </p>
-
-      <section class="card">
-        <h2>Why I Started</h2>
-        <p>
-          I didn’t start this journey with confidence — I started it with uncertainty.
-          Failing my exams more than once made me question myself, but I kept going.
-          This blog is where I share the real side of growth: persistence, discipline,
-          and becoming who you’re meant to be.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2>Featured Post</h2>
-        <p>Start here with the beginning of my journey.</p>
-        <ul>
-          <li>
-            <a href="/posts/post-1/">From Initial Hire to Licensed Agent</a>
+      <ul class="post-list">
+        {posts.map(post => (
+          <li class="post-item">
+            <a href={post.url}>{post.frontmatter.title}</a>
           </li>
-        </ul>
-      </section>
+        ))}
+      </ul>
     </main>
 
     <Footer />
-
   </body>
 </html>
