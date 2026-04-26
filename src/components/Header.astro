@@ -1,0 +1,77 @@
+<header class="site-header">
+  <span class="hero-tag">Life Insurance Journey</span>
+
+  <h1>Delilah’s Journey</h1>
+
+  <p>
+    A soft space for growth, setbacks, faith, motherhood, life insurance,
+    and becoming the woman I’m meant to be.
+  </p>
+
+  <button id="encourageBtn">Need a reminder?</button>
+  <p id="encourageMessage"></p>
+</header>
+
+<script>
+  const button = document.getElementById("encourageBtn");
+  const message = document.getElementById("encourageMessage");
+
+  button?.addEventListener("click", () => {
+    message.textContent = "You’ve made it through hard things before. Keep going. ✨";
+  });
+</script>
+
+<style>
+  .site-header {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 70px 24px 30px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: #ead6ce;
+    color: #7a2e2e;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    line-height: 1.05;
+    margin: 0 0 16px;
+    color: #2c1d18;
+  }
+
+  p {
+    max-width: 620px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4d403a;
+    margin-bottom: 22px;
+  }
+
+  button {
+    background: #7a2e2e;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #5f2424;
+  }
+
+  #encourageMessage {
+    margin-top: 14px;
+    color: #7a5c4d;
+    font-style: italic;
+  }
+</style>
