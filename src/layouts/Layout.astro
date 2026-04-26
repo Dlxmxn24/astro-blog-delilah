@@ -1,12 +1,9 @@
 ---
-<<<<<<< HEAD
-const { frontmatter } = Astro.props;
 import Navigation from "../components/Navigation.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-=======
-const frontmatter = Astro.props.frontmatter ?? {};
->>>>>>> 15569ea2c8a2246a7557520e6fd4f5f05ec8f8fb
+
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
@@ -126,7 +123,7 @@ const frontmatter = Astro.props.frontmatter ?? {};
 
 <body>
  <Navigation />	
-
+<Header> </Header>
    <main>
   <a href="/blog/" class="back">← Back to Blog</a>
 
