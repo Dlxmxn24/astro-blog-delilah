@@ -1,11 +1,136 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = "About Me";
+const name = "Delilah";
+const job = "Life Insurance Agent, Student, and Builder";
+const hobbies = ["building my future", "learning new things (even when it’s hard)", "helping and encouraging others", "creating things — websites, ideas, goals", "growing through challenges", "spending time with my kids",];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #f8f5f2;
+        color: #1f1a17;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+      }
+
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 60px 24px;
+      }
+
+      h1, h2 {
+        font-family: 'Playfair Display', serif;
+        color: #2c1d18;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+      }
+
+      p, li, a {
+        font-size: 1.05rem;
+      }
+
+      a {
+        color: #7a2e2e;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .nav {
+        margin-bottom: 2rem;
+      }
+
+      .nav a {
+        margin-right: 1rem;
+        font-weight: 600;
+      }
+
+      .hero-tag {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        background: #ead9cf;
+        color: #5d2a2a;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        font-size: 1.15rem;
+        color: #5a4a42;
+        max-width: 680px;
+      }
+
+      .card {
+        background: #fffdfb;
+        border: 1px solid #eadfd7;
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(44, 29, 24, 0.06);
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+
+      <span class="hero-tag">About</span>
+      <h1>{pageTitle}</h1>
+
+      <p class="subtitle">
+       <p class="subtitle">
+I’ve gone through my share of trials, setbacks, and challenges — learning as I go and trying to become a better version of myself.
+I’m someone who reflects, grows, and keeps pushing forward, especially for my kids and the future I’m building for them.
+
+This is who I’ve always been, long before life insurance — someone who keeps going, even when things feel uncertain.
+
+I don’t have it all figured out… but I don’t quit either.
+</p>
+      </p>
+
+  <section class="card">
+  <h2>A little about me</h2>
+  <p>
+    I’ve always stayed resilient through life’s testing waters.
+  </p>
+
+  <div class="values">
+  <p>✨ Trusting the process, walking blindly in faith</p>
+  <p>✨ Choosing growth, even when it’s uncomfortable</p>
+  <p>✨ Showing up, even when I feel unsure</p>
+  <p>✨ Building a better future for my kids</p>
+  <p>✨ Turning what I’ve been through into strength</p>
+
+</div>
+  
+</section>
+    </main>
+  </body>
+</html>
