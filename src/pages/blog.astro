@@ -1,11 +1,13 @@
 ---
 import Footer from "../components/Footer.astro";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Delilah’s Journey</title>
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
 
@@ -87,36 +89,9 @@ import Footer from "../components/Footer.astro";
         margin-right: 1rem;
         font-weight: 600;
       }
-
-      .footer {
-  max-width: 820px;
-  margin: 40px auto 0;
-  padding: 32px 24px 50px;
-  border-top: 1px solid #eaded8;
-  color: #6b5a52;
-}
-
-.footer-note {
-  font-style: italic;
-}
-
-.socials {
-  margin-top: 16px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.socials a {
-  background: #ead6ce;
-  color: #7a2e2e;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-}
     </style>
   </head>
+
   <body>
     <main>
       <nav class="nav">
@@ -127,6 +102,7 @@ import Footer from "../components/Footer.astro";
 
       <span class="hero-tag">Life Insurance Journey</span>
       <h1>Delilah’s Journey</h1>
+
       <p class="subtitle">
         Documenting my journey as a life insurance agent — the failures, growth,
         and lessons behind becoming licensed and building something meaningful.
@@ -146,19 +122,14 @@ import Footer from "../components/Footer.astro";
         <h2>Featured Post</h2>
         <p>Start here with the beginning of my journey.</p>
         <ul>
-          <li><a href="/posts/post-1/">From Initial Hire to Licensed Agent</a></li>
+          <li>
+            <a href="/posts/post-1/">From Initial Hire to Licensed Agent</a>
+          </li>
         </ul>
       </section>
     </main>
-    <footer class="footer">
-  <p>© 2026 Delilah’s Journey</p>
-  <p class="footer-note">Connect with me and follow the journey. ✨</p>
 
-  <div class="socials">
-    <a href="https://www.instagram.com/lifewlemenaid?igsh=ZDdtYThyMmp5NzJq&utm_source=qr" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/share/1PGzSwXRLz/?mibextid=wwXIfr" target="_blank">Facebook</a>
-    <a href="https://snapchat.com/t/ISNqF6wl" target="_blank">Snapchat</a>
-  </div>
-</footer>
+    <Footer />
+
   </body>
 </html>
